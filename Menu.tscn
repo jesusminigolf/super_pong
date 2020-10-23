@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://PlayButton.gd" type="Script" id=1]
+
+[node name="Menu" type="Node2D"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="CenterContainer"]
+margin_left = 1.0
+margin_top = 10.0
+margin_right = 39.0
+margin_bottom = 30.0
+text = "Play"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
