@@ -1,21 +1,33 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://PlayButton.gd" type="Script" id=1]
+[ext_resource path="res://tff/retrogaming.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 26
+font_data = ExtResource( 2 )
 
 [node name="Menu" type="Node2D"]
 
+[node name="Background" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 40.0
+margin_right = 82.0
 margin_bottom = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" type="Button" parent="CenterContainer"]
-margin_left = 1.0
-margin_top = 10.0
-margin_right = 39.0
-margin_bottom = 30.0
+margin_right = 82.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 1 )
 text = "Play"
 script = ExtResource( 1 )
 __meta__ = {
