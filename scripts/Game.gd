@@ -1,12 +1,12 @@
 extends Node2D
 
-var player = preload("res://scene/Player.tscn")
+var Player = preload("res://scene/Player.tscn")
 var ball = preload("res://scene/Ball.tscn").instance()
 
 const speed = 320
 
-var player_left = player.instance()
-var player_right = player.instance()
+var player_left = Player.instance()
+var player_right = Player.instance()
 
 # var player_right_texture = load("res://images/player2.png") TODO: diferentes colores para los sprites
 
@@ -18,6 +18,7 @@ func _ready():
 	
 	ball.position.x = get_viewport().size.x / 2
 	ball.position.y = get_viewport().size.y / 2
+	ball.velocity = Vector2(1, 0)
 
 	player_left.get_node("Sprite").texture = load("res://images/player1.png")
 	player_left.position.x = 50
@@ -39,6 +40,4 @@ func _input(event):
 	if Input.is_action_just_released("right_up"): player_right.set_going_up(0)
 	if Input.is_action_just_released("right_down"): player_right.set_going_down(0)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	

@@ -23,3 +23,8 @@ func _physics_process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Player_area_entered(area):
+	if area.is_in_group("bolas"):
+		print("TOCADO!!!!")
