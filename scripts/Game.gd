@@ -18,10 +18,12 @@ func _ready():
 	
 	ball.position.x = get_viewport().size.x / 2
 	ball.position.y = get_viewport().size.y / 2
-	
+
+	player_left.get_node("Sprite").texture = load("res://images/player1.png")
 	player_left.position.x = 50
 	player_left.position.y = get_viewport().size.y / 2
 	
+	player_right.get_node("Sprite").texture = load("res://images/player2.png")
 	player_right.position.x = get_viewport().size.x - 50
 	player_right.position.y = get_viewport().size.y / 2
 	
