@@ -28,7 +28,10 @@ func _ready():
 	player_right.position.x = get_viewport().size.x - 50
 	player_right.position.y = get_viewport().size.y / 2
 	
-
+	print(get_viewport().size.x)
+	
+	
+	
 func _input(event):
 	if Input.is_action_just_pressed("left_up"): player_left.set_going_up(1)
 	if Input.is_action_just_pressed("left_down"): player_left.set_going_down(1)
@@ -40,4 +43,4 @@ func _input(event):
 	if Input.is_action_just_released("right_up"): player_right.set_going_up(0)
 	if Input.is_action_just_released("right_down"): player_right.set_going_down(0)
 
-	
+

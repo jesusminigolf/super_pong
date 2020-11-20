@@ -19,12 +19,3 @@ func _physics_process(delta):
 	self.position.y += delta * (going_down - going_up) * speed
 	if self.position.y <= 12 + 60: self.position.y = 12 + 60
 	if self.position.y >= 708 - 60: self.position.y = 708 - 60
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Player_area_entered(area):
-	if area.is_in_group("bolas"):
-		print("TOCADO!!!!")
