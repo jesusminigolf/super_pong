@@ -5,7 +5,7 @@ var velocity = Vector2()
 
 func _process(delta):
 	var rectangulo = $Shape
-	print("POS Y BOLA = " + str($Shape.get_shape()))
+	#print("POS Y BOLA = " + str($Shape.get_shape()))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,10 +24,10 @@ func _physics_process(delta):
 	
 func _on_Ball_area_entered(area):
 	if area.is_in_group("player"):
-		var vertical_distance = (area.get_node("Sprite").get_rect().position.y - $Sprite.get_rect().position.y)
-		print("VEL VERT = " + str(vertical_distance))
+		var vertical_distance =  self.position.y - area.position.y
+		#print("VEL VERT = " + str(vertical_distance))
 		velocity.x *= -1
-		velocity.y += vertical_distance / 10
+		velocity.y += vertical_distance / 50
 		"""
 		var generator = RandomNumberGenerator.new()
 		generator.randomize()
