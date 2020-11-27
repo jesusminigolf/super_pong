@@ -10,6 +10,7 @@ var player_right = Player.instance()
 
 # var player_right_texture = load("res://images/player2.png") TODO: diferentes colores para los sprites
 
+
 func _ready():
 	# OS.set_borderless_window(true)
 	add_child(player_right)
