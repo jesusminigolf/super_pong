@@ -18,15 +18,17 @@ __meta__ = {
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_right = 82.0
-margin_bottom = 40.0
+margin_right = 1280.0
+margin_bottom = 720.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" type="Button" parent="CenterContainer"]
-margin_right = 82.0
-margin_bottom = 40.0
+margin_left = 599.0
+margin_top = 340.0
+margin_right = 681.0
+margin_bottom = 380.0
 custom_fonts/font = SubResource( 1 )
 text = "Play"
 script = ExtResource( 1 )
